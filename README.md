@@ -1,5 +1,5 @@
 # Fluent Math Helper
- A library with fluent math helper functions
+ A library with fluent math helper functions. This library contains common use cases.
 
 ## Instructions
 
