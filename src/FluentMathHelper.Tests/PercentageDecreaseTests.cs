@@ -12,10 +12,6 @@ public class PercentageDecreaseTests
     [InlineData(100, 10, 90)]
     public void PercentageDecreaseFromOldValueToNewValue_Should_BeExpected(decimal from, decimal to, decimal expected)
     {
-        decimal x = new PercentageDecrease()
-            .From(from)
-            .To(to);
-
-        Assert.Equal(expected, x);
+        Assert.Equal(expected, from.CalculatePercentageDecreaseTo(to));
     }
 }

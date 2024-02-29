@@ -10,8 +10,6 @@ public class PercentageOfTests
     [InlineData(60, 15, 25)]
     public void Should_PercentageOfWholeAmount_ReturnExpected(decimal whole, decimal value, decimal expected)
     {
-        decimal x = new PercentageOf().Whole(whole).Is(value);
-
-        Assert.Equal(expected, x);
+        Assert.Equal(expected, whole.DeterminePercentageFromAbsoluteValue(value));
     }
 }

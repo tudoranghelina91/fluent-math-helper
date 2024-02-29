@@ -8,9 +8,6 @@ public class PercentageTests
     [InlineData(150, 100, 150)]
     public void PercentageAmountOfValue_Should_BeExpected(decimal percentage, decimal value, decimal expected)
     {
-        decimal x = new Percentage()
-            .Amount(percentage).Of(value);
-
-        Assert.Equal(expected, x);
+        Assert.Equal(expected, value.Percent(percentage));
     }
 }
